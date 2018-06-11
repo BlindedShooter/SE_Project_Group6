@@ -1,0 +1,58 @@
+{
+  "name": "버터핑거 팬케익스",
+  "background_img":
+    "https://66.media.tumblr.com/tumblr_maz36qMJEu1rqx7a0o1_500.png",
+  "logo":
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPwSFIGhDjmkrhi2seXLiLFyFS0JvOkl7Ba098GvS8SNRv1ln6",
+  "description": "저녁에도 브런치를 먹을 수 있는 곳",
+  "tags": ["브런치", "팬케익스", "레스토랑"],
+  "stars": 4.6,
+  "reviews": 142,
+  "menus": [
+    {
+      "id": 1,
+      "img":
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFYQfeXdsxkByLvOj_RJX_beh5tNEMAGr60-O5tYAAEd5A2Ijv6g",
+      "name": "Alligator",
+      "description":
+        "5가지 과일 시럽과 아이스크림을 곁들인 버터핑거 팬케익스 대표 디저트",
+      "price": 44000
+    },
+    {
+      "id": 2,
+      "img":
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFYQfeXdsxkByLvOj_RJX_beh5tNEMAGr60-O5tYAAEd5A2Ijv6g",
+      "name": "Alligator",
+      "description":
+        "5가지 과일 시럽과 아이스크림을 곁들인 버터핑거 팬케익스 대표 디저트",
+      "price": 44000
+    },
+    {
+      "id": 3,
+      "img":
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFYQfeXdsxkByLvOj_RJX_beh5tNEMAGr60-O5tYAAEd5A2Ijv6g",
+      "name": "Alligator",
+      "description":
+        "5가지 과일 시럽과 아이스크림을 곁들인 버터핑거 팬케익스 대표 디저트",
+      "price": 44000
+    },
+    {
+      "id": 4,
+      "img":
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFYQfeXdsxkByLvOj_RJX_beh5tNEMAGr60-O5tYAAEd5A2Ijv6g",
+      "name": "Alligator",
+      "description":
+        "5가지 과일 시럽과 아이스크림을 곁들인 버터핑거 팬케익스 대표 디저트",
+      "price": 44000
+    },
+    {
+      "id": 5,
+      "img":
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFYQfeXdsxkByLvOj_RJX_beh5tNEMAGr60-O5tYAAEd5A2Ijv6g",
+      "name": "Alligator",
+      "description":
+        "5가지 과일 시럽과 아이스크림을 곁들인 버터핑거 팬케익스 대표 디저트",
+      "price": 44000
+    }
+  ]
+}
