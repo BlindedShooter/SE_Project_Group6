@@ -4,7 +4,6 @@ import RestaurantHeader from "../components/RestaurantHeader";
 import RestaurantMain from "../components/RestaurantMain";
 import Navigation from "../components/Navigation/Navigation";
 import RestaurantMenuOrderCart from "../components/RestaurantMenuOrderCart";
-import RestaurantMenuOrderList from "../components/RestaurantMenuOrderList";
 
 class RestaurantDetailPage extends Component {
   render() {
@@ -33,8 +32,11 @@ class RestaurantDetailPage extends Component {
           onCartAdd={onCartAdd}
           cart={cart}
         />
-        {/* <RestaurantMenuOrderList /> */}
         <RestaurantMenuOrderCart cart={cart} onOrder={onOrder} />
+        {/* background-image */}
+        {/* Restaurant Info Card */}
+        {/* Restaurant Menu Tab */}
+        {/* Restaurant Menu List */}
       </RestaurantDetailTemplate>
     );
   }

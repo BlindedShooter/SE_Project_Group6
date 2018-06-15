@@ -6,7 +6,6 @@
 
   > .floating-card {
     display: flex;
-    position: relative;
     width: 90%;
     height: 110px;
     background-color: #fff;
@@ -44,8 +43,7 @@
 
       > .order-info {
         display: flex;
-        // position: absolute;
-
+        position: relative;
         > .price {
           color: #4392fc;
           font-size: 15px;
@@ -53,8 +51,7 @@
         }
         > .action-button {
           position: absolute;
-          right: 10px;
-          bottom: 5px;
+          right: 0;
           display: flex;
           > .quantity {
             background-color: #4a4a4a;

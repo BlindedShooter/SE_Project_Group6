@@ -4,6 +4,11 @@ import RestaurantMenu from "../RestaurantMenu";
 import { ThreeBounce } from "better-react-spinkit";
 import * as api from "lib/api";
 
+//화면 하단에 보이는 메뉴 리스트를 관리하는 컴포넌트 입니다.
+//메뉴 정보와 스크롤 정보를 state에 저장합니다.
+//처음 마운트된 메뉴 정보를 menus에 저장하고 스크롤이 다 내려가면 새로운 메뉴를 추가합니다.
+//menus에 메인, 사이드, 음료, 기타메뉴가 다 저장되기 때문에 메뉴가 로딩된 후에 다른 탭을 눌렀다 돌아와도 기존 메뉴 정보가 유지되도록 하였습니다. 
+//isLastPage는 메뉴가 다 로딩되었을 때 True로 바꾸어 더이상 request가 가지 않도록 하였습니다.
 class RestaurantMenuList extends Component {
   state = {
     loading: false,
@@ -33,6 +38,7 @@ class RestaurantMenuList extends Component {
     }
   };
 
+    //메뉴정보를 api.js 파일에서 서버에 axios  요청 합니다. 
   requestAPI = async (
     restaurantId,
     menuTypeKey,
@@ -84,6 +90,7 @@ class RestaurantMenuList extends Component {
     }
   };
 
+    //레스토랑 id와 메뉴 타입을 받고 해당하는 메뉴 정보를 받기 위해 레스토랑id, 메뉴의key등 request하는데 필요한 정보를 requestAPI에 전달하고 호출합니다
   getMenus = async (restaurantId, menuType) => {
     const menus = this.state.menus;
     if (this.state.loading || this.state.isLastPage[menuType]) {
@@ -161,7 +168,7 @@ class RestaurantMenuList extends Component {
       }
     }
   };
-
+    //스크롤이 충분히 밑으로 가면 새로운 메뉴 요청을 보내고 더이상 불러올 메뉴가 없으면 스크롤이 다 내려갔음을 표시합니다.
   handleScroll = e => {
     const scrollbox = e.target;
     const scrolledToBottom =
@@ -178,6 +185,7 @@ class RestaurantMenuList extends Component {
     }
   };
 
+    //상단 컴포넌트의 스테이트가 바뀌면 MenuList의 스테이트를 자동으로 업데이트 해줍니다.   
   componentDidUpdate(prevProps) {
     if (this.props.location !== prevProps.location) {
       const { match, restaurantId } = this.props;
@@ -187,7 +195,7 @@ class RestaurantMenuList extends Component {
       this.scrollbox.addEventListener("scroll", this.handleScroll);
     }
   }
-
+    //처음 시작할때 정보들(메뉴, 스크롤 정보)를 스테이트에 마운트 합니다.
   componentDidMount() {
     const { match, restaurantId } = this.props;
     const menuType = match.params.type;
@@ -195,6 +203,7 @@ class RestaurantMenuList extends Component {
     this.scrollbox.addEventListener("scroll", this.handleScroll);
   }
 
+    //스테이트가 업데이트 되면 자동으로 호출되어 화면에 정보들을 뿌려줍니다.
   render() {
     // console.log(this.state.menus[0]);
     // console.log(this.props);
@@ -232,11 +241,7 @@ class RestaurantMenuList extends Component {
         }}
       >
         {menuListComponent}
-        {this.state.loading && (
-          <div className={styles.RestaurantMenuLoading}>
-            <ThreeBounce color="black" size={15} />
-          </div>
-        )}
+        {this.state.loading && <ThreeBounce color="black" size={15} />}
       </div>
     );
   }
